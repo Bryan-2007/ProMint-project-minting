@@ -26,9 +26,13 @@ Since the NFT is non-transferable, it acts as a permanent proof of achievement.
 🔐 Key Features
 
 ✅ Only authorized professor can mint NFTs
+
 ✅ Non-transferable (Soulbound) token
+
 ✅ On-chain verification
+
 ✅ Publicly viewable skill record
+
 ✅ Deployed on Ethereum Sepolia Testnet
 
 🛠 Tech Stack
