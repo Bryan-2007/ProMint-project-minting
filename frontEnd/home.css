@@ -29,7 +29,8 @@
     padding: 30px;
     font-size: large;
     font-family:monospace;
-    width: 300px;
+    width: auto;
+    gap: 20px;
 }
 
 .n1, .n2, .n3{
@@ -46,9 +47,8 @@
     cursor: pointer;
 }
 
-.login, .login:link{
-    text-decoration: none;
-    color: black;
+.login-button{
+    all: unset;     /*Removes all formatting of the element except inherited from parent*/
 }
 
 .wel1{
@@ -56,6 +56,57 @@
     font-family: monospace;
 }
 
+.blur-effect{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(15, 130, 91, 0.484);
+    backdrop-filter: blur(3px);     /*Alter behind element properties*/
+}
+
 .login-popup{
     display: none;
+    padding: 20px;
+    border: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    background-color: rgb(128, 80, 32);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.wardrobe-title{
+    text-align: center;
+    font-size: 37px;
+}
+
+.wardrobe{
+    height: 400px;
+    width: 70%;
+    margin: auto;       /*IMP: To center a div in page middle*/
+
+    border: solid 3px;
+    border-radius: 30px;
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    gap: 30px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.pro1, .pro2, .pro3{
+    height: 330px;
+    width: 300px;
+    border: solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
