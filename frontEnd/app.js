@@ -1,3 +1,5 @@
+// Login popup js
+
 const loginBtn = document.querySelector(".login-button");
 const popup = document.querySelector(".login-popup");
 const closeBtn = document.querySelector(".back");
@@ -13,15 +15,21 @@ closeBtn.onclick = function(){
     blur_effect.style.display = "none";
 }
 
+// Search box js
+
 const searchBox = document.querySelector(".walletSearch");
-const walletOptions = document.querySelector(".wallet-options");
+const walletOptionsPopup = document.querySelector(".wallet-options-popup");
+const walletOption = document.querySelector(".wallet-options-popup *");
 
 searchBox.onclick = function(){
-    walletOptions.style.display = "block";
+    walletOptionsPopup.style.display = "block";
 }
 
 window.onclick = function(event){      /*Capture clicks on other than wallet options*/
-    if (!searchBox.contains(event.target) && !walletOptions.contains(event.target)) {
-        walletOptions.style.display = "none";
+    if (!searchBox.contains(event.target) && !walletOptionsPopup.contains(event.target)) {
+        walletOptionsPopup.style.display = "none";
     }
 };
+
+walletOption.onclick = function(){
+}

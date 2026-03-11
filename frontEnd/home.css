@@ -37,14 +37,19 @@
     border: 3px;
     border-style:solid;
     border-radius: 30px;
+    border-color: black;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    color: rgb(102, 202, 123);
+    font-weight: bold;
+    font-size: 17px;
 }
 
 .n1:hover, .n2:hover, .n3:hover{
     background-color: rgb(218, 161, 88);
     cursor: pointer;
+    color: black;
 }
 
 .login-button{
@@ -111,13 +116,24 @@
     flex-shrink: 0;
 }
 
-.wallet-options{
+.login-popup-header{
+    color: black;
+}
+
+.wallet-options-popup{
     display: none;
     font-size: 12px;
     background-color: rgb(199, 210, 201);
+    color: black;
+    position: fixed;
+    transform: (-50%, -50%) scale(1.2);
 }
 
-.wallet-options *{
-    border: solid 1px;
-    z-index: 1000;
+.wallet-options-popup *{
+    border: 1px;
+    padding: 5px;
+}
+
+.wallet-options-popup *:hover{
+    background-color: rgb(173, 184, 175);
 }
