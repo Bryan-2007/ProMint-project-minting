@@ -35,7 +35,22 @@ window.onclick = function(event){      /*Capture clicks on other than wallet opt
 const metamaskWallet = document.querySelector(".wallet1");
 
 metamaskWallet.onclick = async function(){
-    if (typeof window.ethereum) {
-        
+    if (typeof window.ethereum == "undefined") {
+        alert("Metamask wallet extension not found!");
+        return;
+    }
+
+    try{
+        const accounts = await window.ethereum.request({
+            method: "eth_requestAccounts"
+        });
+
+        const walletAddress = accounts[0];
+
+        console.log("Connected wallet address: ", walletAddress);
+    }
+
+    catch(error){
+        console.log("User did not approve request to log in");
     }
 }
