@@ -62,7 +62,7 @@ metamaskWallet.onclick = async function(){
 function getWalletAddress() {
     const wallet = localStorage.getItem("wallet");
 
-    document.querySelector(".wallet-address").innerHTML = "Connected wallet address: " + wallet.slice(0, 6) + "..." + wallet.slice(-4);
+    document.querySelector(".wallet-address").innerHTML = "Connected Wallet - " + wallet.slice(0, 6) + "..." + wallet.slice(-4);
 }
 
 // function to logout the connected wallet
